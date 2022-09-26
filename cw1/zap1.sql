@@ -61,3 +61,15 @@ REFERENCES `uczestnicy`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 ALTER TABLE `noclegi` ADD CONSTRAINT `noclegi_miejsca` FOREIGN KEY (`miejsce_id`) 
 REFERENCES `miejsca`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT; 
+
+
+CREATE User `nazwa_user`@`localhost` identified by 'qazqaz';
+
+show grants;
+show grants for  `nazwa_user`@`localhost`
+
+Drop User `nazwa_user`@`localhost`
+
+grant select,insert,delete,update on `4ib_cw1`.* to u1@localhost;
+
+grant select,insert,delete,update on `4ib_cw1`.* to u1@localhost;
