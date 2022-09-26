@@ -47,3 +47,17 @@ WHERE Year(data_wyjazdu) % 2 = 0
 and month(data_wyjazdu) % 2 = 0
 
 SELECT TIMESTAMPDIFF(month,now(),'2021-04-12')
+
+
+CREATE TABLE wypos(id int not null AUTO_INCREMENT PRIMARY KEY,nazwa varchar(50),ilosc int)
+CREATE TABLE noclegi(id int not null AUTO_INCREMENT PRIMARY KEY,pokoj varchar(50),ilosc int)
+
+ALTER TABLE `noclegi` ADD `miejsce_id` INT NOT NULL AFTER `ilosc`; 
+
+ALTER TABLE `wypos` ADD `uczestnicy_id` INT NOT NULL AFTER `ilosc`; 
+
+ALTER TABLE `wypos` ADD CONSTRAINT `wypos_uczestnik` FOREIGN KEY (`uczestnicy_id`) 
+REFERENCES `uczestnicy`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT; 
+
+ALTER TABLE `noclegi` ADD CONSTRAINT `noclegi_miejsca` FOREIGN KEY (`miejsce_id`) 
+REFERENCES `miejsca`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT; 
