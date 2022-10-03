@@ -73,3 +73,7 @@ Drop User `nazwa_user`@`localhost`
 grant select,insert,delete,update on `4ib_cw1`.* to u1@localhost;
 
 grant select,insert,delete,update on `4ib_cw1`.* to u1@localhost;
+
+REVOKE INSERT ON *.* FROM 'jeffrey'@'localhost';
+
+REVOKE DELETE ON 4ib_cw1.* FROM 'u1'@'localhost';
