@@ -77,3 +77,20 @@ grant select,insert,delete,update on `4ib_cw1`.* to u1@localhost;
 REVOKE INSERT ON *.* FROM 'jeffrey'@'localhost';
 
 REVOKE DELETE ON 4ib_cw1.* FROM 'u1'@'localhost';
+
+SELECT imie,nazwisko,miejsca.nazwa,miejsca.data_wyjazdu FROM `uczestnicy` INNER JOIN miejsca 
+on uczestnicy.miejsce_id=miejsca.id ORDER BY miejsca.nazwa
+
+SELECT count(uczestnicy.id) as `ilosc uczestnikow`,miejsca.nazwa,miejsca.data_wyjazdu 
+FROM `uczestnicy` INNER JOIN miejsca
+ on uczestnicy.miejsce_id=miejsca.id GROUP by miejsca.nazwa ORDER BY miejsca.nazwa
+
+SELECT count(uczestnicy.id) as `ilosc uczestnikow`,miejsca.nazwa,miejsca.data_wyjazdu FROM `uczestnicy` INNER JOIN miejsca
+on uczestnicy.miejsce_id=miejsca.id 
+GROUP by month(miejsca.data_wyjazdu)
+ORDER BY miejsca.nazwa
+
+SELECT count(uczestnicy.id) as `ilosc uczestnikow`,miejsca.nazwa,
+month(miejsca.data_wyjazdu) as miesiac 
+FROM `uczestnicy` INNER JOIN miejsca on uczestnicy.miejsce_id=miejsca.id 
+GROUP by month(miejsca.data_wyjazdu) ORDER BY miejsca.nazwa
