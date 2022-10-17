@@ -16,6 +16,7 @@
     $d = getMiejsca();
     // var_dump($d);
     echo toList($d,"ol");
+    echo toTable($d);
     ?>
     <!-- </pre> -->
 </body>

@@ -8,3 +8,21 @@
     color: grey;
     text-decoration: underline;
 }
+table{
+    border-collapse: collapse;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+}
+td,th,table{
+    border: solid 1px black;
+}
+th{
+    background-color: lightblue;
+}
+td,th{
+    padding: 8px;
+}
+.right{
+    text-align: right;
+}

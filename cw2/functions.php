@@ -28,3 +28,22 @@ function toList(array $data,string $kind="ul"):string{
 
     return $html . "</{$kind}>";
 }
+function toTable(array $data):string {
+    $html = "<table>";
+    $html .= "<tr><th>lp</th><th>miejsce</th><th>cena</th><th>data</th></tr>";
+    $lp = 0;
+    $total = 0;
+    foreach($data as $row){
+        $lp++;
+        $html .= "<tr>";
+        $html .= "<td>{$lp}</td>";
+        $html .= "<td style='text-align:left'>{$row["nazwa"]}</td>";
+        $html .= "<td class='right'>{$row["cena"]}</td>";
+        $html .= "<td>{$row["data_wyjazdu"]}</td>";
+        $html .= "</tr>";
+        $total += $row["cena"];
+    }
+    $html .= "<tr class='right'><td class='right' colspan='2'>"
+             ."Cena za wszystko: </td><td colspan='2'>{$total}</td></tr>";
+    return $html ."</table>";
+}
