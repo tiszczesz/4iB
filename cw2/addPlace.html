@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cw2.css">
+</head>
+<body>
+    <form action="addNew.php" method="post">
+        <div class="line">
+            <label for="">Podaj miejsce: </label>
+            <input type="text" name="miejsce">
+        </div>
+        <div class="line">
+            <label for="">Podaj cenę: </label>
+            <input type="number" name="cena" min="0" step="0.01">
+        </div>
+        <div class="line">
+            <label for="">Wybierz datę: </label>
+            <input type="date" name="data">
+        </div>
+        <div class="line">
+            <input type="submit" value="Dodaj">
+        </div>
+    </form>
+</body>
+</html>

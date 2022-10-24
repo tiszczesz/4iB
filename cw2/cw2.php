@@ -19,5 +19,9 @@
     echo toTable($d);
     ?>
     <!-- </pre> -->
+
+    <div>
+        <a href="addPlace.html">dodaj nowe miejsce wycieczki</a>
+    </div>
 </body>
 </html>
