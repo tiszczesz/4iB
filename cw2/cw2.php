@@ -10,6 +10,7 @@
 <body>
     <h1>Wykaz miejsc wycieczkowych</h1>
     <!-- <pre> -->
+        <div class="container">
     <?php
     require_once "functions.php";
     $conn = getConnection();
@@ -19,7 +20,7 @@
     echo toTable($d);
     ?>
     <!-- </pre> -->
-
+    </div>
     <div>
         <a href="addPlace.html">dodaj nowe miejsce wycieczki</a>
     </div>

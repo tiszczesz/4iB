@@ -38,3 +38,6 @@ input[type=submit]{
     width: 140px;
     padding: 5px;
 }
+.container{
+    display: flex;
+}

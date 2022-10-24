@@ -47,3 +47,11 @@ function toTable(array $data):string {
              ."Cena za wszystko: </td><td colspan='2'>{$total}</td></tr>";
     return $html ."</table>";
 }
+function AddPlace(array $data):bool {
+    $conn = getConnection();
+    if($conn==null) return false;
+    $result = $conn->query("INSERT INTO miejsca(nazwa,cena,`data_wyjazdu`)"
+        ." VALUES ('{$data[0]}','{$data[1]}','{$data[2]}')");
+        $conn->close();
+    return $result;
+}
