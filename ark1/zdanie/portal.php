@@ -38,7 +38,13 @@ require_once "functions.php";
             <h3>Wizytówka</h3>
             <?php
             if(isset($_POST['btn'])){
-                var_dump($_POST);
+                $login  = trim($_POST['login']);
+                $password = trim($_POST['haslo']);
+                if($login==''||$password==''){
+                    echo "Brak danych!!!";
+                }else{
+                    Autorize($login,$password);
+                }
             }
             ?>
         </div>
