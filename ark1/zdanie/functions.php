@@ -65,7 +65,7 @@ TEXT;
         }
         // $user = $result->fetch_row();
         // if($user)
-        echo "<a href='#' class=\"btn\">Więcej informacji</a>";
+        echo "<a href='dane.html' class=\"btn\">Więcej informacji</a>";
         echo "</div>";
         return ;
     }
