@@ -44,9 +44,11 @@ require_once "functions.php";
                     echo "Brak danych!!!";
                 }else{
                     Autorize($login,$password);
+
                 }
             }
             ?>
+            
         </div>
     </div>
     <div class="footer">
