@@ -16,3 +16,6 @@ select uzytkownicy.login,
   dane.rok_urodz,(Year(CURDATE())- dane.rok_urodz) as wiek
 from uzytkownicy INNER JOIN dane
 on uzytkownicy.id=dane.id 
+
+zarzadzanie kopiami zapasowymi:
+https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html
