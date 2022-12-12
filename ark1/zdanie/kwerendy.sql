@@ -19,3 +19,7 @@ on uzytkownicy.id=dane.id
 
 zarzadzanie kopiami zapasowymi:
 https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html
+
+C:\xampp\mysql\bin\mysqldump.exe 
+        --all-databases --user root 
+        > C:\xampp\htdocs\4iB\dump.sql
