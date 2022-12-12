@@ -12,7 +12,9 @@ GROUP by typy.nazwa
 SELECT klienci.zdjecie, klienci.imie, opinie.opinia 
 from klienci INNER join opinie 
 on klienci.id=opinie.Klienci_id 
-where klienci.Typy_id BETWEEN 2 and 3 
+--where klienci.Typy_id BETWEEN 2 and 3 
+where klienci.Typy_id=2 or klienci.Typy_id=3
+--where klienci.Typy_id>=2 and klienci.Typy_id<=3
 
 --kw4
 
